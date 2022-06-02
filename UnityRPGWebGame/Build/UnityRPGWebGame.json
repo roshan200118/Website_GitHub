@@ -1,0 +1,17 @@
+{
+"companyName": "Roshan Productions",
+"productName": "Free Fromage",
+"productVersion": "0.1",
+"dataUrl": "UnityRPGWebGame.data.unityweb",
+"wasmCodeUrl": "UnityRPGWebGame.wasm.code.unityweb",
+"wasmFrameworkUrl": "UnityRPGWebGame.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "UnityRPGWebGame.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.18f1"
+}

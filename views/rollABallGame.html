@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Roll-A-Ball</title>
+
+    <!-- font awesome cdn link -->
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css\style.css">
+
+    <link rel="shortcut icon" href="\UnityRollABallWebGame\TemplateData\favicon.ico">
+    <link rel="stylesheet" href="\UnityRollABallWebGame\TemplateData\style.css">
+    <script src="\UnityRollABallWebGame\TemplateData\UnityProgress.js"></script>
+    <script src="\UnityRollABallWebGame\Build\UnityLoader.js"></script>
+    
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/UnityRollABallWebGame/Build/UnityRollABallWebGame.json", {onProgress: UnityProgress});
+    </script>
+
+  </head>
+  <body style="padding-left: 0%;" class="fade-in">
+
+    <div class="project-header">
+        <h1 class="heading"> Project 3 - <span>Roll-A-Ball</span> </h1>
+    </div>
+
+
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: auto; height: auto"></div>
+      <div class="footer">
+        <!-- <div class="webgl-logo"></div> -->
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="webgl-gameTitle">Roll-A-Ball</div>
+      </div>
+    </div>
+
+
+    <div class="project">
+
+      <a href="https://github.com/roshan200118/Roll_A_Ball_Project" target="_blank" rel="noopener noreferrer" class='fab fa-github'></a>
+
+
+      <div class="content">
+        <h3><span>Description</span></h3>
+        <p>Roll-A-Ball game developed using C#, Visual Studio, and Unity 3D. (2021).</p>
+      </div>
+    
+    
+      <div class="row">
+        <div class="box-container">
+          <div class="box">
+            <img src="image\c_sharp.png" />
+            <p>C#</p>
+          </div>
+    
+          <div class="box">
+            <img src="image\unity.png" />
+            <p>Unity</p>
+          </div>
+
+          <div class="box">
+            <img src="image\webGL.png" />
+            <p>WebGL</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="js\darkModeToggle.js"></script>
+</html>

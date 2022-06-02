@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Space SHMUP</title>
+
+    <!-- font awesome cdn link -->
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css\style.css">
+
+    <link rel="shortcut icon" href="\UnitySpaceSHMUPWebGame\TemplateData\favicon.ico">
+    <link rel="stylesheet" href="\UnitySpaceSHMUPWebGame\TemplateData\style.css">
+    <script src="\UnitySpaceSHMUPWebGame\TemplateData\UnityProgress.js"></script>
+    <script src="\UnitySpaceSHMUPWebGame\Build\UnityLoader.js"></script>
+    
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "/UnitySpaceSHMUPWebGame/Build/UnitySpaceSHMUPWebGame.json", {onProgress: UnityProgress});
+    
+      function updateBounds()
+      {
+        unityInstance.SendMessage("Bridge", "updateBounds");
+      }
+
+      function changeColorRed()
+      {
+        unityInstance.SendMessage("Bridge", "changeColorRed");
+      }
+
+      function changeColorBlue()
+      {
+        unityInstance.SendMessage("Bridge", "changeColorBlue");
+      }
+
+      function changeColorPurple()
+      {
+        unityInstance.SendMessage("Bridge", "changeColorPurple");
+      }
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === "Escape") {
+          updateBounds();
+        }
+      });
+    </script>
+
+  </head>
+  <body style="padding-left: 0%;" class="fade-in">
+
+    <div class="project-header">
+        <h1 class="heading"> Project 2 - <span>Space SHMUP</span> </h1>
+    </div>
+
+
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: auto; height: auto"></div>
+      <div class="footer">
+        <!-- <div class="webgl-logo"></div> -->
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1);updateBounds()"></div>
+        <div class="webgl-gameTitle">Space SHMUP</div>
+      </div>
+    </div>
+
+    <div class="project">
+
+    
+      <div class="row">
+        <div class="box-container" style="justify-content: center;">
+          <div class="box" style="flex: none; display: block;">
+            <p style="text-align: left;">Unity JavaScript Bridge:</p>
+
+            <button id="btnSpaceSHMUPRed" onclick="changeColorRed()">Change Ship to Red</button>
+            <!-- <a href="https://github.com/roshan200118/SpaceSHMUP.git" target="_blank" rel="noopener noreferrer" class='fab fa-github'></a> -->
+
+            <button id="btnSpaceSHMUPBlue" onclick="changeColorBlue()">Change Ship to Blue</button>
+            <!-- <a href="https://github.com/roshan200118/SpaceSHMUP.git" target="_blank" rel="noopener noreferrer" class='fab fa-github'></a> -->
+
+            <button id="btnSpaceSHMUPPurple" onclick="changeColorPurple()">Change Ship to Purple</button>
+            <!-- <a href="https://github.com/roshan200118/SpaceSHMUP.git" target="_blank" rel="noopener noreferrer" class='fab fa-github'></a> -->
+          </div>
+          
+  
+
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <div class="project">
+
+      <a href="https://github.com/roshan200118/SpaceSHMUP.git" target="_blank" rel="noopener noreferrer" class='fab fa-github'></a>
+
+
+      <div class="content">
+        <h3><span>Description</span></h3>
+        <p>Space SHMUP (Shoot 'em up) game developed using C#, Visual Studio, and Unity 3D. (2021).</p>
+      </div>
+    
+    
+      <div class="row">
+        <div class="box-container">
+          <div class="box">
+            <img src="image\c_sharp.png" />
+            <p>C#</p>
+          </div>
+    
+          <div class="box">
+            <img src="image\unity.png" />
+            <p>Unity</p>
+          </div>
+
+          <div class="box">
+            <img src="image\webGL.png" />
+            <p>WebGL</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="js\darkModeToggle.js"></script>
+  <script>
+    function alert() {
+      console.log('WORKS');
+    }
+    </script>
+</html>

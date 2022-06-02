@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Test</title>
+
+    <!-- font awesome cdn link -->
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css\style.css">
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+<body>
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> me </h1>
+    
+        <!-- <form action="POST" data-netlify="true"> -->
+        <form action="https://formsubmit.co/81504587ff551472bcaf4ed328d2575a" method="POST" enctype="multipart/form-data">
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display:none;">
+
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="_next" value="http://localhost:5000/test.html">
+
+
+            <input type="text" placeholder="your name" class='box' name="name" id="name">
+            <input type="email" placeholder="your email" class='box' name="email" id="email">
+            <input type="text" placeholder="subject" class='box' name="subject" id="subject">
+            <textarea name="message" class='box' placeholder='your message' id="message" cols="30" rows="10"></textarea>
+            <!-- <input class="box" type="file" name="myfile" id="myfile" placeholder="Upload File" rows="10"> -->
+            <input class="box" type="file" name="attachment" 
+            accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*, .xlsx, .xls, .doc, .docx, .ppt, .pptx, .txt" 
+            placeholder="Upload File" rows="10">
+            <!-- <div class="box" data-netlify-recaptcha="true"></div> -->
+            <div class="recaptcha-container">
+                <div class="g-recaptcha" 
+                data-sitekey="6LezxFoeAAAAAGSNtAyeLUJl6FASav11eDYPK3Aq"
+                data-callback="recaptcha_callback">
+            <!-- <div class="g-recaptcha" data-sitekey="6LezxFoeAAAAAGSNtAyeLUJl6FASav11eDYPK3Aq" data-callback="onSubmit" data-size="invisible"> -->
+            </div>
+            </div>
+            
+
+            <input type="submit" value='send message' class="btn" id="submitBtn" disabled/>
+        </form>
+        <script>
+            function recaptcha_callback(){
+                var registerBtn = document.querySelector('#submitBtn');
+
+                registerBtn.removeAttribute('disabled');
+
+                registerBtn.style.cursor = 'pointer';
+
+            }
+        </script>
+    
+    </section>
+</body>
+</html>
