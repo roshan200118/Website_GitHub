@@ -1,2 +1,2 @@
 # Website
-My personal website developed using C#, Visual Studio, and Unity 3D. (2021).
+My personal website developed using HTML, CSS, JavaScript, and WebGL. (2021).
